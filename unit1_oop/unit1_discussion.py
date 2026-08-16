@@ -24,7 +24,7 @@ from copy import copy, deepcopy
 #
 # Replace the pass statement with your implementation.
 
-class ParentClass:
+class BankAccount:
     pass
 
 
