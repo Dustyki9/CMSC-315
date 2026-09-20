@@ -27,6 +27,8 @@ After completing the programming assignment, add this reflection to your initial
 
 Your reflection should be approximately 150–200 words and address the following questions:
 
-1. What concepts or skills did you learn while completing this assignment?
-2. What challenges did you encounter, and how did you overcome them?
-3. Explain how hash tables behave, what collisions are, and how hash tables can improve efficiency.
+This assignment deepened my understanding of how Python dictionaries work as hash tables. I learned that keys are run through a hash function to determine which internal bucket stores their value, which is why lookups, insertions, and deletions average O(1) time instead of requiring a full scan like a list would. Writing the insert, lookup, update, and delete operations helped me see that updating a key doesn't create a new entry, it overwrites the value at the existing hashed location.
+
+The main challenge was handling edge cases safely. Directly accessing a missing key with square brackets raises a KeyError, so I had to use .get() and .pop() with default values to avoid crashing the program. This taught me the difference between "unsafe" direct access and defensive lookup methods.
+
+A collision occurs when two different keys hash to the same bucket. Python resolves this internally using open addressing, so we rarely notice it, but collisions explain why hash table performance is described as average O(1) rather than guaranteed — in rare worst-case scenarios with many collisions, performance can degrade toward O(n).
